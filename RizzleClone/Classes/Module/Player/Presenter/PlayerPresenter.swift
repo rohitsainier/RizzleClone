@@ -13,10 +13,10 @@ protocol PlayerPresentation {
 }
 
 struct PlayerPresenter {
-    var view: PlayerView
+    var view: PlayerVCView
     var interactor: PlayerUseCase
     var router: PlayerRounting
-    init(view: PlayerView,interactor: PlayerUseCase,router: PlayerRounting){
+    init(view: PlayerVCView,interactor: PlayerUseCase,router: PlayerRounting){
         self.view = view
         self.interactor = interactor
         self.router = router

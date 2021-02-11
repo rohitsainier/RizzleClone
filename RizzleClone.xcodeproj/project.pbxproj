@@ -27,7 +27,6 @@
 		22A079BB25D506F000614CA0 /* PlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079BA25D506F000614CA0 /* PlayerInteractor.swift */; };
 		22A079C025D506FD00614CA0 /* PlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079BF25D506FD00614CA0 /* PlayerPresenter.swift */; };
 		22A079C525D5070D00614CA0 /* PlayerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079C425D5070D00614CA0 /* PlayerRouter.swift */; };
-		22A079CA25D507E500614CA0 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079C925D507E500614CA0 /* PlayerView.swift */; };
 		22A079F525D50DD900614CA0 /* VideoContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079F325D50DD900614CA0 /* VideoContainerCell.swift */; };
 		22A079F625D50DD900614CA0 /* VideoContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A079F425D50DD900614CA0 /* VideoContainerCell.xib */; };
 		22A079FC25D50ED800614CA0 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079FA25D50ED800614CA0 /* VideoCell.swift */; };
@@ -36,6 +35,8 @@
 		22A07A0A25D53BD100614CA0 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A07A0925D53BD100614CA0 /* LazyImageView.swift */; };
 		22A07A1125D5439500614CA0 /* VideoPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A07A0F25D5439500614CA0 /* VideoPlayerCell.swift */; };
 		22A07A1225D5439500614CA0 /* VideoPlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A07A1025D5439500614CA0 /* VideoPlayerCell.xib */; };
+		22A07A4E25D5540800614CA0 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A07A4D25D5540800614CA0 /* VideoPlayerView.swift */; };
+		22A07A5625D5552C00614CA0 /* PlayerVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A07A5525D5552C00614CA0 /* PlayerVCView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +83,6 @@
 		22A079BA25D506F000614CA0 /* PlayerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInteractor.swift; sourceTree = "<group>"; };
 		22A079BF25D506FD00614CA0 /* PlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPresenter.swift; sourceTree = "<group>"; };
 		22A079C425D5070D00614CA0 /* PlayerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRouter.swift; sourceTree = "<group>"; };
-		22A079C925D507E500614CA0 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		22A079F325D50DD900614CA0 /* VideoContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContainerCell.swift; sourceTree = "<group>"; };
 		22A079F425D50DD900614CA0 /* VideoContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoContainerCell.xib; sourceTree = "<group>"; };
 		22A079FA25D50ED800614CA0 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
@@ -91,6 +91,8 @@
 		22A07A0925D53BD100614CA0 /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
 		22A07A0F25D5439500614CA0 /* VideoPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerCell.swift; sourceTree = "<group>"; };
 		22A07A1025D5439500614CA0 /* VideoPlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlayerCell.xib; sourceTree = "<group>"; };
+		22A07A4D25D5540800614CA0 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		22A07A5525D5552C00614CA0 /* PlayerVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVCView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 			children = (
 				22A0798D25D5025000614CA0 /* Helper.swift */,
 				22A07A0925D53BD100614CA0 /* LazyImageView.swift */,
+				22A07A4D25D5540800614CA0 /* VideoPlayerView.swift */,
 			);
 			path = ProjectHelper;
 			sourceTree = "<group>";
@@ -343,7 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				22A079B525D506DC00614CA0 /* PlayerVC.swift */,
-				22A079C925D507E500614CA0 /* PlayerView.swift */,
+				22A07A5525D5552C00614CA0 /* PlayerVCView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -513,7 +516,6 @@
 				22A0797F25D5018400614CA0 /* ExploreBuilder.swift in Sources */,
 				22A079BB25D506F000614CA0 /* PlayerInteractor.swift in Sources */,
 				22A079A225D503C400614CA0 /* ExploreView.swift in Sources */,
-				22A079CA25D507E500614CA0 /* PlayerView.swift in Sources */,
 				22A0798825D501FF00614CA0 /* NavigationBuilder.swift in Sources */,
 				22A0798E25D5025000614CA0 /* Helper.swift in Sources */,
 				22A079C025D506FD00614CA0 /* PlayerPresenter.swift in Sources */,
@@ -522,6 +524,7 @@
 				22A07A0A25D53BD100614CA0 /* LazyImageView.swift in Sources */,
 				22A0799325D5031400614CA0 /* ExploreInteractor.swift in Sources */,
 				22A079AE25D506C600614CA0 /* PlayerBuilder.swift in Sources */,
+				22A07A5625D5552C00614CA0 /* PlayerVCView.swift in Sources */,
 				22A0799825D5032B00614CA0 /* ExplorePresenter.swift in Sources */,
 				22A0799D25D5033D00614CA0 /* ExploreRouter.swift in Sources */,
 				22A07A0225D510B500614CA0 /* Video.swift in Sources */,
@@ -529,6 +532,7 @@
 				22A079F525D50DD900614CA0 /* VideoContainerCell.swift in Sources */,
 				22A079B625D506DC00614CA0 /* PlayerVC.swift in Sources */,
 				22A079C525D5070D00614CA0 /* PlayerRouter.swift in Sources */,
+				22A07A4E25D5540800614CA0 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

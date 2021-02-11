@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class VideoPlayerCell: UICollectionViewCell {
 
-    @IBOutlet weak var playerView: UIView!
+   
+    @IBOutlet weak var playerView: PlayerView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

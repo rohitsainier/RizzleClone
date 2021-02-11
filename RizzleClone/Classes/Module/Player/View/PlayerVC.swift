@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 class PlayerVC: UIViewController {
 
@@ -15,6 +16,7 @@ class PlayerVC: UIViewController {
     //presentation
     var presenter: PlayerPresentation!
     var videoNodes: [Node] = [Node]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +30,7 @@ class PlayerVC: UIViewController {
     
 }
 
-extension PlayerVC: PlayerView{
+extension PlayerVC: PlayerVCView{
     
 }
 
@@ -44,14 +46,23 @@ extension PlayerVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoPlayerCell", for: indexPath) as? VideoPlayerCell else {return UICollectionViewCell()}
-        if indexPath.row % 2 == 0{
-            cell.playerView.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        }
-        else{
-            cell.playerView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        }
+        let avPlayer = AVPlayer(url: URL(string: videoNodes[indexPath.row].video.encodeURL)!)
+        cell.playerView.playerLayer.player = avPlayer
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        print("willDisplay:\(indexPath.row)")
+        guard let videoCell = (cell as? VideoPlayerCell) else { return }
+        videoCell.playerView.player?.play()
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        print("didEndDisplaying:\(indexPath.row)")
+        guard let videoCell = cell as? VideoPlayerCell else { return };
+        videoCell.playerView.player?.pause()
+        videoCell.playerView.player = nil
+    }
 }
+
+
