@@ -9,10 +9,11 @@ import UIKit
 
 
 struct PlayerModuleBuilder{
-    static func build(data:[Node]) -> UIViewController{
+    static func build(data:[Node],selectedIndex: Int) -> UIViewController{
         let mainstory = Storyboard.Main.load
         let view = mainstory.instantiateViewController(withIdentifier: "PlayerVC") as! PlayerVC
         view.videoNodes = data
+        view.selectedIndex = selectedIndex
         let interactor = PlayerInteractor()
         let router = PlayerRouter(view: view)
         let presenter = PlayerPresenter(view: view, interactor: interactor, router: router)

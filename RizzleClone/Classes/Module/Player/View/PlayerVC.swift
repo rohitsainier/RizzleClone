@@ -16,7 +16,7 @@ class PlayerVC: UIViewController {
     //presentation
     var presenter: PlayerPresentation!
     var videoNodes: [Node] = [Node]()
-    
+    var selectedIndex: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +26,13 @@ class PlayerVC: UIViewController {
     
     private func configUI(){
         collectionView.register(UINib(nibName: "VideoPlayerCell", bundle: nil), forCellWithReuseIdentifier: "VideoPlayerCell")
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let indexPath = IndexPath(item: selectedIndex, section: 0)
+        self.collectionView.scrollToItem(at: indexPath, at: [.centeredVertically, .centeredHorizontally], animated: true)
     }
     
 }
@@ -48,13 +55,18 @@ extension PlayerVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollec
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoPlayerCell", for: indexPath) as? VideoPlayerCell else {return UICollectionViewCell()}
         let avPlayer = AVPlayer(url: URL(string: videoNodes[indexPath.row].video.encodeURL)!)
         cell.playerView.playerLayer.player = avPlayer
+        print(indexPath.row)
         return cell
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         print("willDisplay:\(indexPath.row)")
         guard let videoCell = (cell as? VideoPlayerCell) else { return }
-        videoCell.playerView.player?.play()
+        DispatchQueue.main.async {
+            videoCell.playerView.player?.play()
+        }
         
     }
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -62,6 +74,8 @@ extension PlayerVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollec
         guard let videoCell = cell as? VideoPlayerCell else { return };
         videoCell.playerView.player?.pause()
         videoCell.playerView.player = nil
+        let avPlayer = AVPlayer(url: URL(string: videoNodes[indexPath.row].video.encodeURL)!)
+        videoCell.playerView.playerLayer.player = avPlayer
     }
 }
 

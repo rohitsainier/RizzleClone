@@ -29,7 +29,7 @@ class LazyImageView: UIImageView
             let asset = AVAsset(url: imageURL)
             let avAssetImageGenerator = AVAssetImageGenerator(asset: asset)
             avAssetImageGenerator.appliesPreferredTrackTransform = true
-            let thumnailTime = CMTimeMake(value: 5, timescale: 1)
+            let thumnailTime = CMTimeMakeWithSeconds(0.0, preferredTimescale: 600)
             do {
                 let cgThumbImage = try avAssetImageGenerator.copyCGImage(at: thumnailTime, actualTime: nil)
                 let thumbImage = UIImage(cgImage: cgThumbImage)

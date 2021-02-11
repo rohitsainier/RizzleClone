@@ -10,7 +10,7 @@ import Foundation
 
 protocol ExplorePresentation {
     func displayCategory(filename:Jsonfiles) -> Void
-    func moveToPlayerVC(data: [Node]) -> Void
+    func moveToPlayerVC(data: [Node],selectedIndex: Int) -> Void
 }
 
 struct ExplorePresenter {
@@ -25,8 +25,8 @@ struct ExplorePresenter {
 }
 
 extension ExplorePresenter: ExplorePresentation{
-    func moveToPlayerVC(data: [Node]) {
-        router.navigateToPlayerScreen(data: data)
+    func moveToPlayerVC(data: [Node],selectedIndex: Int) {
+        router.navigateToPlayerScreen(data: data, index: selectedIndex)
     }
     
     func displayCategory(filename: Jsonfiles){
