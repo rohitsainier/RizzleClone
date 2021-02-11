@@ -11,18 +11,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VideoContainerCell" rowHeight="155" id="KGk-i7-Jjw" customClass="VideoContainerCell" customModule="RizzleClone" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VideoContainerCell" rowHeight="295" id="KGk-i7-Jjw" customClass="VideoContainerCell" customModule="RizzleClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="295"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
+                <rect key="frame" x="0.0" y="0.0" width="337" height="295"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-SA-g0q">
-                        <rect key="frame" x="16" y="0.0" width="288" height="30"/>
+                        <rect key="frame" x="16" y="0.0" width="305" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRN-Yl-WSd">
-                                <rect key="frame" x="0.0" y="5.5" width="77.5" height="19.5"/>
+                                <rect key="frame" x="0.0" y="15.5" width="77.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -31,22 +31,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sRN-Yl-WSd" firstAttribute="leading" secondItem="X5q-SA-g0q" secondAttribute="leading" id="2e4-GZ-src"/>
-                            <constraint firstAttribute="height" constant="30" id="C9n-eN-vVz"/>
+                            <constraint firstAttribute="height" constant="50" id="C9n-eN-vVz"/>
                             <constraint firstItem="sRN-Yl-WSd" firstAttribute="centerY" secondItem="X5q-SA-g0q" secondAttribute="centerY" id="Inz-8t-5aJ"/>
                         </constraints>
                     </view>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-xd-q4w">
-                        <rect key="frame" x="16" y="30" width="304" height="125"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-xd-q4w">
+                        <rect key="frame" x="0.0" y="50" width="337" height="245"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xPj-q8-dcx">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="0.0" id="xPj-q8-dcx">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <connections>
-                            <outlet property="dataSource" destination="-1" id="BnC-ti-egS"/>
-                            <outlet property="delegate" destination="-1" id="UVI-2r-Pcx"/>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="EF9-6i-pH3"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="re5-Cq-jl9"/>
                         </connections>
                     </collectionView>
                 </subviews>
@@ -55,7 +55,7 @@
                     <constraint firstItem="VYT-xd-q4w" firstAttribute="top" secondItem="X5q-SA-g0q" secondAttribute="bottom" id="Fin-dg-dPu"/>
                     <constraint firstAttribute="trailing" secondItem="X5q-SA-g0q" secondAttribute="trailing" constant="16" id="GpS-OR-XUG"/>
                     <constraint firstItem="X5q-SA-g0q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="KT9-G4-49E"/>
-                    <constraint firstItem="VYT-xd-q4w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="e5X-44-ofS"/>
+                    <constraint firstItem="VYT-xd-q4w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="e5X-44-ofS"/>
                     <constraint firstItem="X5q-SA-g0q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fVz-pL-eZD"/>
                     <constraint firstAttribute="trailing" secondItem="VYT-xd-q4w" secondAttribute="trailing" id="tb1-kl-861"/>
                 </constraints>
@@ -65,7 +65,7 @@
                 <outlet property="collectionView" destination="VYT-xd-q4w" id="Lmg-MY-hIU"/>
                 <outlet property="titleLbl" destination="sRN-Yl-WSd" id="VnV-sV-5Fy"/>
             </connections>
-            <point key="canvasLocation" x="18.840579710144929" y="120.87053571428571"/>
+            <point key="canvasLocation" x="31.159420289855074" y="167.07589285714286"/>
         </tableViewCell>
     </objects>
     <resources>
