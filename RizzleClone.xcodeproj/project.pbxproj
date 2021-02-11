@@ -33,6 +33,9 @@
 		22A079FC25D50ED800614CA0 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079FA25D50ED800614CA0 /* VideoCell.swift */; };
 		22A079FD25D50ED800614CA0 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A079FB25D50ED800614CA0 /* VideoCell.xib */; };
 		22A07A0225D510B500614CA0 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A07A0125D510B500614CA0 /* Video.swift */; };
+		22A07A0A25D53BD100614CA0 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A07A0925D53BD100614CA0 /* LazyImageView.swift */; };
+		22A07A1125D5439500614CA0 /* VideoPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A07A0F25D5439500614CA0 /* VideoPlayerCell.swift */; };
+		22A07A1225D5439500614CA0 /* VideoPlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A07A1025D5439500614CA0 /* VideoPlayerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		22A079FA25D50ED800614CA0 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		22A079FB25D50ED800614CA0 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		22A07A0125D510B500614CA0 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		22A07A0925D53BD100614CA0 /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
+		22A07A0F25D5439500614CA0 /* VideoPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerCell.swift; sourceTree = "<group>"; };
+		22A07A1025D5439500614CA0 /* VideoPlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlayerCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				22A0798D25D5025000614CA0 /* Helper.swift */,
+				22A07A0925D53BD100614CA0 /* LazyImageView.swift */,
 			);
 			path = ProjectHelper;
 			sourceTree = "<group>";
@@ -290,6 +297,7 @@
 		22A079A625D5065D00614CA0 /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				22A07A0E25D5437700614CA0 /* Xib */,
 				22A079AC25D5069600614CA0 /* Builder */,
 				22A079AB25D5069000614CA0 /* View */,
 				22A079AA25D5068700614CA0 /* Interactor */,
@@ -355,6 +363,15 @@
 				22A079F425D50DD900614CA0 /* VideoContainerCell.xib */,
 				22A079FA25D50ED800614CA0 /* VideoCell.swift */,
 				22A079FB25D50ED800614CA0 /* VideoCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		22A07A0E25D5437700614CA0 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				22A07A0F25D5439500614CA0 /* VideoPlayerCell.swift */,
+				22A07A1025D5439500614CA0 /* VideoPlayerCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -463,6 +480,7 @@
 			files = (
 				22A079F625D50DD900614CA0 /* VideoContainerCell.xib in Resources */,
 				22A0794025D4F8D200614CA0 /* assignment.json in Resources */,
+				22A07A1225D5439500614CA0 /* VideoPlayerCell.xib in Resources */,
 				22A0791325D4F73800614CA0 /* LaunchScreen.storyboard in Resources */,
 				22A079FD25D50ED800614CA0 /* VideoCell.xib in Resources */,
 				22A0791025D4F73800614CA0 /* Assets.xcassets in Resources */,
@@ -491,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A07A1125D5439500614CA0 /* VideoPlayerCell.swift in Sources */,
 				22A0797F25D5018400614CA0 /* ExploreBuilder.swift in Sources */,
 				22A079BB25D506F000614CA0 /* PlayerInteractor.swift in Sources */,
 				22A079A225D503C400614CA0 /* ExploreView.swift in Sources */,
@@ -500,6 +519,7 @@
 				22A079C025D506FD00614CA0 /* PlayerPresenter.swift in Sources */,
 				22A0795D25D4FC3C00614CA0 /* ExploreVC.swift in Sources */,
 				22A079FC25D50ED800614CA0 /* VideoCell.swift in Sources */,
+				22A07A0A25D53BD100614CA0 /* LazyImageView.swift in Sources */,
 				22A0799325D5031400614CA0 /* ExploreInteractor.swift in Sources */,
 				22A079AE25D506C600614CA0 /* PlayerBuilder.swift in Sources */,
 				22A0799825D5032B00614CA0 /* ExplorePresenter.swift in Sources */,

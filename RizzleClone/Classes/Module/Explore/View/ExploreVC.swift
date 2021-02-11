@@ -47,7 +47,7 @@ extension ExploreVC: ExploreView{
 //MARK:- UITableViewDelegate
 extension ExploreVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return SCREEN.height.load / 3
+        return SCREEN.height.load / 2 - 100
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return videosArr.count
@@ -63,6 +63,7 @@ extension ExploreVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "VideoContainerCell", for: indexPath) as? VideoContainerCell else {return UITableViewCell()}
+        cell.presenter = presenter
         cell.titleLbl.text = videosArr[indexPath.section].title
         cell.VideoInfo = videosArr[indexPath.section].nodes
         return cell

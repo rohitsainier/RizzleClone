@@ -10,7 +10,7 @@ import UIKit
 class VideoCell: UICollectionViewCell {
 
    
-    @IBOutlet weak var videoThumnail: UIImageView!
+    @IBOutlet weak var videoThumnail: LazyImageView!
     @IBOutlet weak var videoBackView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,3 +24,5 @@ class VideoCell: UICollectionViewCell {
     }
 
 }
+
+

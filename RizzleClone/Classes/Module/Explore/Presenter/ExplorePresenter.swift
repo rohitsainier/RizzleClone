@@ -10,6 +10,7 @@ import Foundation
 
 protocol ExplorePresentation {
     func displayCategory(filename:Jsonfiles) -> Void
+    func moveToPlayerVC(data: [Node]) -> Void
 }
 
 struct ExplorePresenter {
@@ -24,6 +25,10 @@ struct ExplorePresenter {
 }
 
 extension ExplorePresenter: ExplorePresentation{
+    func moveToPlayerVC(data: [Node]) {
+        router.navigateToPlayerScreen(data: data)
+    }
+    
     func displayCategory(filename: Jsonfiles){
         if let videos = interactor.fetchCategory(filename: filename.rawValue){
             view.didCategoryRecieved(videos: videos)

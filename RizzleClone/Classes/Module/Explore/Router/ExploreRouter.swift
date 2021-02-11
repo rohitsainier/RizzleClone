@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ExploreRounting {
-    func navigateToPlayerScreen() -> Void
+    func navigateToPlayerScreen(data:[Node]) -> Void
 }
 
 struct ExploreRouter {
@@ -19,7 +19,8 @@ struct ExploreRouter {
 }
 
 extension ExploreRouter: ExploreRounting{
-    func navigateToPlayerScreen() {
-        
+    func navigateToPlayerScreen(data: [Node]) {
+        let playerVC = PlayerModuleBuilder.build(data:data)
+        self.view.navigationController?.pushViewController(playerVC, animated: true)
     }
 }
