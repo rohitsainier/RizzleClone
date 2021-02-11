@@ -34,6 +34,14 @@
                                     <constraint firstAttribute="height" constant="70" id="otc-qk-M3m"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uth-ns-DjH">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="x77-B8-QXW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Skq-ON-B0d"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,9 +49,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eQw-F4-fAh" secondAttribute="trailing" id="3zS-Wn-IzB"/>
                             <constraint firstItem="eQw-F4-fAh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QHv-Ff-6oq"/>
                             <constraint firstItem="eQw-F4-fAh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Vnj-A7-8St"/>
+                            <constraint firstItem="uth-ns-DjH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZKJ-yS-CcK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uth-ns-DjH" secondAttribute="trailing" id="e6o-BR-X5h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uth-ns-DjH" secondAttribute="bottom" id="fkd-LH-mnC"/>
+                            <constraint firstItem="uth-ns-DjH" firstAttribute="top" secondItem="eQw-F4-fAh" secondAttribute="bottom" constant="40" id="kPq-NH-2ow"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Explore" id="hw7-ze-T6s"/>
+                    <connections>
+                        <outlet property="tableView" destination="uth-ns-DjH" id="Irq-gC-kkP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

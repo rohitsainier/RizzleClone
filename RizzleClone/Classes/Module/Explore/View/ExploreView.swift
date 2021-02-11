@@ -8,5 +8,6 @@
 import Foundation
 
 protocol ExploreView {
-    
+    func didCategoryRecieved(videos: [VideoElement])
+    func didErrorOccured()
 }

@@ -28,6 +28,11 @@
 		22A079C025D506FD00614CA0 /* PlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079BF25D506FD00614CA0 /* PlayerPresenter.swift */; };
 		22A079C525D5070D00614CA0 /* PlayerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079C425D5070D00614CA0 /* PlayerRouter.swift */; };
 		22A079CA25D507E500614CA0 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079C925D507E500614CA0 /* PlayerView.swift */; };
+		22A079F525D50DD900614CA0 /* VideoContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079F325D50DD900614CA0 /* VideoContainerCell.swift */; };
+		22A079F625D50DD900614CA0 /* VideoContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A079F425D50DD900614CA0 /* VideoContainerCell.xib */; };
+		22A079FC25D50ED800614CA0 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A079FA25D50ED800614CA0 /* VideoCell.swift */; };
+		22A079FD25D50ED800614CA0 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A079FB25D50ED800614CA0 /* VideoCell.xib */; };
+		22A07A0225D510B500614CA0 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A07A0125D510B500614CA0 /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,11 @@
 		22A079BF25D506FD00614CA0 /* PlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPresenter.swift; sourceTree = "<group>"; };
 		22A079C425D5070D00614CA0 /* PlayerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRouter.swift; sourceTree = "<group>"; };
 		22A079C925D507E500614CA0 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		22A079F325D50DD900614CA0 /* VideoContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContainerCell.swift; sourceTree = "<group>"; };
+		22A079F425D50DD900614CA0 /* VideoContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoContainerCell.xib; sourceTree = "<group>"; };
+		22A079FA25D50ED800614CA0 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		22A079FB25D50ED800614CA0 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		22A07A0125D510B500614CA0 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +211,7 @@
 		22A0795325D4FB9100614CA0 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				22A079EF25D50C7800614CA0 /* Xib */,
 				22A0797D25D5017100614CA0 /* Builder */,
 				22A0795825D4FBD600614CA0 /* View */,
 				22A0795725D4FBCC00614CA0 /* Interactor */,
@@ -222,6 +233,7 @@
 		22A0795525D4FBBB00614CA0 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				22A07A0125D510B500614CA0 /* Video.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -336,6 +348,17 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		22A079EF25D50C7800614CA0 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				22A079F325D50DD900614CA0 /* VideoContainerCell.swift */,
+				22A079F425D50DD900614CA0 /* VideoContainerCell.xib */,
+				22A079FA25D50ED800614CA0 /* VideoCell.swift */,
+				22A079FB25D50ED800614CA0 /* VideoCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -438,8 +461,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A079F625D50DD900614CA0 /* VideoContainerCell.xib in Resources */,
 				22A0794025D4F8D200614CA0 /* assignment.json in Resources */,
 				22A0791325D4F73800614CA0 /* LaunchScreen.storyboard in Resources */,
+				22A079FD25D50ED800614CA0 /* VideoCell.xib in Resources */,
 				22A0791025D4F73800614CA0 /* Assets.xcassets in Resources */,
 				22A0790E25D4F73500614CA0 /* Main.storyboard in Resources */,
 			);
@@ -474,11 +499,14 @@
 				22A0798E25D5025000614CA0 /* Helper.swift in Sources */,
 				22A079C025D506FD00614CA0 /* PlayerPresenter.swift in Sources */,
 				22A0795D25D4FC3C00614CA0 /* ExploreVC.swift in Sources */,
+				22A079FC25D50ED800614CA0 /* VideoCell.swift in Sources */,
 				22A0799325D5031400614CA0 /* ExploreInteractor.swift in Sources */,
 				22A079AE25D506C600614CA0 /* PlayerBuilder.swift in Sources */,
 				22A0799825D5032B00614CA0 /* ExplorePresenter.swift in Sources */,
 				22A0799D25D5033D00614CA0 /* ExploreRouter.swift in Sources */,
+				22A07A0225D510B500614CA0 /* Video.swift in Sources */,
 				22A0790725D4F73500614CA0 /* AppDelegate.swift in Sources */,
+				22A079F525D50DD900614CA0 /* VideoContainerCell.swift in Sources */,
 				22A079B625D506DC00614CA0 /* PlayerVC.swift in Sources */,
 				22A079C525D5070D00614CA0 /* PlayerRouter.swift in Sources */,
 			);

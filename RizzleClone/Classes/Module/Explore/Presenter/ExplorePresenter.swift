@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol ExplorePresentation {
-   
+    func displayCategory(filename:Jsonfiles) -> Void
 }
 
 struct ExplorePresenter {
@@ -24,5 +24,12 @@ struct ExplorePresenter {
 }
 
 extension ExplorePresenter: ExplorePresentation{
-    
+    func displayCategory(filename: Jsonfiles){
+        if let videos = interactor.fetchCategory(filename: filename.rawValue){
+            view.didCategoryRecieved(videos: videos)
+        }
+        else{
+            view.didErrorOccured()
+        }
+    }
 }

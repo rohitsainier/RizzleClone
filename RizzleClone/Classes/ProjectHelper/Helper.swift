@@ -16,3 +16,7 @@ enum Storyboard{
         }
     }
 }
+
+enum Jsonfiles:String{
+    case Assignment =  "assignment"
+}
