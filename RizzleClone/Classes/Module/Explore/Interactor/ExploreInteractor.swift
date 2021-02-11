@@ -1,0 +1,23 @@
+//
+//  ExploreInteractor.swift
+//  RizzleClone
+//
+//  Created by Rohit Saini on 11/02/21.
+//
+
+import Foundation
+
+
+protocol ExploreUseCase {
+    func fetchCategory()
+}
+
+struct ExploreInteractor {
+    
+}
+
+extension ExploreInteractor: ExploreUseCase{
+    func fetchCategory() {
+        
+    }
+}
