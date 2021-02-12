@@ -8,6 +8,7 @@
 import UIKit
 import AVKit
 
+
 class PlayerVC: UIViewController {
 
     //OUTLETS
@@ -63,6 +64,7 @@ extension PlayerVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollec
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         print("willDisplay:\(indexPath.row)")
+        selectedIndex = indexPath.row
         guard let videoCell = (cell as? VideoPlayerCell) else { return }
         DispatchQueue.main.async {
             videoCell.playerView.player?.play()

@@ -56,6 +56,8 @@ extension VideoContainerCell: UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCell", for: indexPath) as? VideoCell else {return UICollectionViewCell()}
         let videoUrl = URL(string: VideoInfo[indexPath.row].video.encodeURL)!
         cell.videoThumnail.loadImage(fromURL: videoUrl)
+        
+        
         return cell
     }
     
